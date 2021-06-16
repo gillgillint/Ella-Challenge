@@ -1,10 +1,29 @@
 //COLOR VARIABLES
 $color-primary: #23a6f0;
+$color-primary--dark:#0e8bd2;
+
+
+
+//Animation
+@keyframes tiny-move--left{
+
+    0%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(.75rem);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
 
 
 
 
-
+//Base setup
 *,
 *::before,
 *::after{
@@ -20,6 +39,8 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
-    
-   
+}
+
+li{
+    list-style: none;
 }
