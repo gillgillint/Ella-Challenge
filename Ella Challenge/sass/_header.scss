@@ -47,8 +47,6 @@
             }           
         }
         .register{
-
-
             .btn{        
                 margin-left: 5rem;       
                 &:hover{
@@ -63,5 +61,39 @@
             }
                    
         }
+    }
+
+
+    &__content{
+        width: 70%;
+        height: 87rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8rem 0;
+        position: absolute;
+        top: 11rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        main{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 0;
+
+            h4{
+                margin: 4rem 0;
+            }
+
+            .cta{
+                button:not(:last-child){
+                    margin-right: 2rem;
+                }
+            }
+        }
+        
     }
 }

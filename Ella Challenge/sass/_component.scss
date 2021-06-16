@@ -13,13 +13,25 @@
     }
 }
 .btn-round{
+    cursor: pointer;
     background-color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 37px;
+    padding: 1.5rem 3.6rem;
+    transition: all .2s;
+
+    &:hover{
+        background-color: $color-primary--dark;
+    }
 
     &--ghost{
         background: inherit;
         border: 1px solid #fff;
+        transition: all .2s;
+        &:hover{
+            border: 1px solid $color-primary;
+            background-color: $color-primary;
+        }
     }
 }
 
