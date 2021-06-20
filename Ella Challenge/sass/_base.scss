@@ -1,46 +1,81 @@
 //COLOR VARIABLES
 $color-primary: #23a6f0;
-$color-primary--dark:#0e8bd2;
+$color-primary--dark: #0e8bd2;
+$color-primary-light: #8ec2f2;
 
-
+$sec-text-color: #737373;
 
 //Animation
 @keyframes tiny-move--left{
+  0% {
+    transform: translateX(0);
+  }
 
-    0%{
-        transform: translateX(0);
-    }
+  50% {
+    transform: translateX(0.75rem);
+  }
 
-    50%{
-        transform: translateX(.75rem);
-    }
-
-    100%{
-        transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
+  }
 }
 
+//Utilities
 
-
+.mb-medium {
+  margin-bottom: 3.5rem;
+}
 
 //Base setup
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
+}
+.container {
+  max-width: 100%;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 36em) {
+      @content;
+    } // <572px
+  }
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 48em) {
+      @content;
+    } // <=768px
+  }
+  @if $breakpoint == md {
+    @media only screen and (max-width: 62em) {
+      @content;
+    } //  <=992px
+  }
+  @if $breakpoint == lg {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // <=1200px
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (max-width: 87.5em) {
+      @content;
+    } // <=1400px
+  }
 }

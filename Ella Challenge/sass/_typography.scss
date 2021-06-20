@@ -62,8 +62,8 @@ letter-spacing: 0.1px;
 //Text link
 .text-link {
     text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
     line-height: 2.4rem;
     letter-spacing: 0.2px;
     
@@ -81,7 +81,7 @@ letter-spacing: 0.1px;
 //btn text
 .btn-text{
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 2.2rem;
     letter-spacing: 0.2px;
@@ -91,9 +91,13 @@ letter-spacing: 0.1px;
 
 //Paragraph
 .paragraph{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 2rem;
     letter-spacing: 0.2rem;
     color: #737373;
 }
+
+//color-text
+.color-text-white{color: #fff;}
+.secondary-color-text{color: $sec-text-color;}
