@@ -21,10 +21,11 @@ $sec-text-color: #737373;
 }
 
 //Utilities
+.text-center{text-align: center;}
 
-.mb-medium {
-  margin-bottom: 3.5rem;
-}
+.mt-small{margin-top: 1.4rem;}
+.mb-small{margin-bottom: 1.4rem;}
+.mb-medium { margin-bottom: 3.5rem;}
 
 //Base setup
 *,
@@ -38,6 +39,15 @@ $sec-text-color: #737373;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media  only screen and (max-width:62em) {
+
+    font-size: 58%;
+  }
+
+ @media only screen and (max-width:36em){
+   font-size: 50%; 
+ }
 }
 
 body {

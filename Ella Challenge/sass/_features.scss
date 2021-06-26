@@ -12,6 +12,13 @@
        justify-content: center;
        width: 70%;
 
+
+       @include respond (md){
+
+       flex-direction: column;
+
+
+       }
         
     }
     &__item{
@@ -20,6 +27,8 @@
         align-items: center;
         text-align: center;
         padding: 4rem 5rem;
+
+
 
         
 

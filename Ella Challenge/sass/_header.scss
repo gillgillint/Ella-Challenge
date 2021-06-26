@@ -5,6 +5,14 @@
   display: flex;
   flex-direction: column;
 
+  @include respond (md){
+
+    height: min-content;
+  }
+
+
+  
+
   &__bg {
     background-image: url(../img/hero.jpg);
     height: 80rem;
@@ -12,8 +20,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include respond (md){
+
+      height: 150rem;
+
+    }
+
+    @include respond (sm){
+      height: 200rem;
   }
-  &__nav {
+  }
+  &__nav{
     width: 70%;
     display: flex;
     justify-content: center;
@@ -22,6 +40,10 @@
     margin: 2rem 0;
     left: 50%;
     transform: translateX(-50%);
+
+    @include respond (lg){
+      display: none;
+    }
 
     .logo {
       margin-right: 8rem;
@@ -69,6 +91,13 @@
     top: 11rem;
     left: 50%;
     transform: translateX(-50%);
+    @include respond (lg){
+
+      top: 0;
+      
+    }
+
+    
 
     .main {
       display: flex;
@@ -76,6 +105,7 @@
       align-items: center;
       text-align: center;
       padding: 4rem 0;
+      
 
       h4 {
         margin: 4rem 0;
@@ -84,6 +114,7 @@
       .cta {
         button:not(:last-child) {
           margin-right: 2rem;
+          margin-bottom: 2rem;
         }
       }
     }
@@ -93,13 +124,19 @@
       grid-template-columns: repeat(3, minmax(32rem, 1fr));
       grid-column-gap: 3rem;
       grid-row-gap: 6rem;
+      margin-top: 9rem;
+
+      @include respond (md){
+
+        grid-template-columns: repeat(1, minmax(32rem, 1fr));
+      }
     }
 
     .card-item {
       background-color: #fff;
       padding: 3.5rem 4rem;
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.05);
-      margin-top: 9rem;
+      
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -122,4 +159,46 @@
       }
     }
   }
+}
+.nav-button{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: $color-primary;
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  text-align: center;
+  z-index: 200;
+  display: none;
+
+  @include respond (lg){
+    display: inline-block;
+  }
+ 
+
+}
+.nav-icon{
+position: relative;
+margin-top: 3rem;
+
+&,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #fff;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+    &::before{ top: -.8rem;}
+    &::after{top: .8rem;}
+
 }

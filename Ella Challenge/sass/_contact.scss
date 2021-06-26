@@ -1,0 +1,142 @@
+.contact{
+    background-color: #fafafa;
+    height: min-content;
+    
+    &__bg{
+        background-color: #252B42;
+        height: 80.7rem;
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include respond (md){
+
+            flex-direction: column;
+        }
+
+    }
+    &__head{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:  5rem 0;
+        @include respond (md){
+
+            flex-direction: column;
+
+
+
+        }
+    
+        &__text{
+            margin-right: 23rem;
+            @include respond (md){
+
+             margin-right: 0;
+    
+
+            }            
+        }
+
+        &__photo{
+
+            margin: 5rem 0;
+            
+            img{
+                max-width: 90%;
+            }
+        }
+    }
+
+    &__main{
+        display: flex;
+        justify-content: center;
+        margin-top: -30rem;
+
+        @include respond (md){
+            margin-top: 0;
+           }
+
+
+
+           img{
+            @include respond (sm){
+                display: none;
+            }
+           }
+    }
+    &__form{
+        background-color: #fff;
+        padding: 4rem 5rem ;
+        width: 61rem;      
+
+
+        @include respond (sm){
+            max-width: 61rem;
+        }
+    }
+
+    &__us{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 13.4rem;
+        padding: 4.5rem 0;
+
+
+        @include respond (sm){
+
+            flex-direction: column;
+
+           }
+
+        button{
+            padding: 1.5rem 4rem;
+        }
+    }
+    .consulting{
+        margin-right: 45rem;
+
+        @include respond (sm){
+            margin-right: 0;
+            margin-bottom: 2rem;
+            text-align: start;
+
+        }
+    }
+
+    .form{
+        
+        
+        &__input{
+            width: 100%;
+            font-family: inherit;
+            font-size: 1.4rem;
+            background:#f9f9f9;
+            color: #737373;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            padding: 1.1rem 2.1rem;
+        }
+
+        &__select{
+            width: 100%;
+            font-family: inherit;
+            font-size: 1.4rem;
+            background:#f9f9f9;
+            color: #737373;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            padding: 1.1rem 2.1rem;
+        }
+
+        button{
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+}
